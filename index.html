@@ -3,24 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Matching</title>
+    <title>clicker game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     
 </head>
 <body>
-
-    <div id="game-board">
-        <h1> Matching Game! </h1>
-        <span id="stat-row">
-            <span class="button"><span id="counter">0</span> Clicks</span>
-            <span class="button">Reset</span> 
-          </span>
-    <div id="cards"></div> 
+    <div class="container">
+        <h1>Clicker Game</h1>
+    <hr>
+        <button id="click">Click Me</button>
+        <p>
+            Clicks: <span id="clickCount">0</span> <br>
+        </p>
+    <hr>
+        <h2>Want Some Help??</h2>
+            <div id="autoclicker"> 
+                <h3> Autoclicker </h3>
+                <button id="buy_click" type="button">Buy for 20</button>
+            </div>
+            
     </div>
-
-
+    
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
