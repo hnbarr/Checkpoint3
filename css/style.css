@@ -33,16 +33,16 @@ p {
     margin: 0 auto;
 }
 
-#autoclicker {
+#autoclicker, #speedup {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 10px;
 }
 
-#buy_click {
+#auto, #speed {
     padding: 10px;
     background-color: #F6F6F6;
-    /* margin: 0 auto; */
     width: 150px;
     border-radius: 8px;
 }
