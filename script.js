@@ -36,22 +36,21 @@ $(document).ready(function() {
         }
     })
 
-    // Function to have auto clicker self click 1x per 30 seconds
+    // Function to have auto clicker self click 1x per 5 seconds
     $("#auto").on("click", function(){
         setInterval(function(){
         (button).trigger("click");
-        console.log("i am going to add a click!");
+        console.log("i am going to add a click every 5 seconds!");
         }, 5000);
     })
 
-
-
-
-    // Function to have autoclicker click by .5 seconds faster
-
-
-
-
+    // Function to have auto clicker self click 1x per 1 second.
+    $("#speedup").on("click", function(){
+        setInterval(function(){
+        (button).trigger("click");
+        console.log("i am going to add a click every second!");
+        }, 1000);
+    })
 
     // increment cost of autoClick button after each purchase.
 
