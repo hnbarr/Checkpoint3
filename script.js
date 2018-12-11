@@ -35,20 +35,26 @@ $(document).ready(function() {
         }
     })
 
+    // Function to have auto clicker self click 1x per 30 seconds
 
 
 
 
 
-//CREATE FUNCTIONS TO...
-// subtract from total when purchasing help
-// DONE
-
-// make 'clicks' reflect the help of purchased help, help-buttons + user-clicks!
-// in process...
-
-// make help buttons cost more clicks after proir purchasing, incrementing cost!
-// haven't started yet...
+    // Function to have autoclicker click by .5 seconds faster
 
 
+
+
+
+    // increment cost of autoClick button after each purchase.
+
+
+
+
+
+    // increment cost of speedUp button after each purchase.
+
+
+    
 });
