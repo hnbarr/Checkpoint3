@@ -1,8 +1,9 @@
 'use strict';
 $(document).ready(function() {
-    let clicks = 100; //user clicks.  change to 0 when done
+    let clicks = 0; //user clicks.  change to 0 when done
     let autoCost = 10; //need to make this reflect increased cost!
     let speedCost = 100; //need to make this reflect increased cost!
+    var button = $("#click");
     let total = 0;
     // let autoClick;
 
@@ -28,15 +29,20 @@ $(document).ready(function() {
     })
     $("#speed").on("click", function(){
         if (clicks >= speedCost){
-        console.log("clicks = " +clicks);
-        console.log("speedCost = " +speedCost);
-        clicks = clicks - speedCost;
-        $("#clickCount").html(clicks);
+            console.log("clicks = " +clicks);
+            console.log("speedCost = " +speedCost);
+            clicks = clicks - speedCost;
+            $("#clickCount").html(clicks);
         }
     })
 
     // Function to have auto clicker self click 1x per 30 seconds
-
+    $("#auto").on("click", function(){
+        setInterval(function(){
+        (button).trigger("click");
+        console.log("i am going to add a click!");
+        }, 5000);
+    })
 
 
 
