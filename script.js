@@ -1,8 +1,10 @@
 'use strict';
 $(document).ready(function() {
-    let clicks = 0; //user clicks.
+    let clicks = 100; //user clicks.  change to 0 when done
     let autoCost = 10; //need to make this reflect increased cost!
     let speedCost = 100; //need to make this reflect increased cost!
+    let total = 0;
+    // let autoClick;
 
 
     //need to set up
@@ -12,29 +14,26 @@ $(document).ready(function() {
     // User-Click-Increase Total.
     $("#click").on("click", function(){
         clicks = clicks + 1;
+        total = clicks;
         $("#clickCount").html(clicks);
     })
-
-    // NOT WORKING FULLY!
-
     // Auto Click & Speed Up Purchased = subtract cost from total!
     $("#auto").on("click", function(){
-        if ($("#clickCount" > (autoCost))){
+        if (clicks >= autoCost){
+            console.log("clicks = " +clicks);
+            console.log("autocost = " +autoCost);
             clicks = clicks - autoCost;
             $("#clickCount").html(clicks);
-        } else if  ($(autoCost) > ("#clickCount")){
-            console.log('Unable to purchase, you have less than cost!')
-            }//not working!
-        //need to make unable to buy if cost > total!
+        }
     })
     $("#speed").on("click", function(){
-        if ($("#clickCount" > (speedCost))){
+        if (clicks >= speedCost){
+        console.log("clicks = " +clicks);
+        console.log("speedCost = " +speedCost);
         clicks = clicks - speedCost;
         $("#clickCount").html(clicks);
-        } else; 
-        //need to make unable to buy if cost > total!
+        }
     })
-
 
 
 
