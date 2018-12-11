@@ -18,21 +18,30 @@ $(document).ready(function() {
         total = clicks;
         $("#clickCount").html(clicks);
     })
-    // Auto Click & Speed Up Purchased = subtract cost from total!
+    // Auto Click Purchased = subtract cost from total!
+    // increment cost of autoClick button after each purchase.
     $("#auto").on("click", function(){
         if (clicks >= autoCost){
             console.log("clicks = " +clicks);
             console.log("autocost = " +autoCost);
             clicks = clicks - autoCost;
             $("#clickCount").html(clicks);
+            (autoCost = (autoCost + 15));
+            $("#auto").text("Buy for " + (autoCost));
+            console.log("I am going to add 15 to the cost of Auto Click");
         }
     })
+    // Speed Up Purchased = subtract cost from total!
+    // increment cost of speedup button after each purchase.
     $("#speed").on("click", function(){
         if (clicks >= speedCost){
             console.log("clicks = " +clicks);
             console.log("speedCost = " +speedCost);
             clicks = clicks - speedCost;
             $("#clickCount").html(clicks);
+            (speedCost = (speedCost + 250));
+            $("#speed").text("Buy for " + (speedCost));
+            console.log("I am going to add 250 to the cost of Speed Click");
         }
     })
 
@@ -51,15 +60,7 @@ $(document).ready(function() {
         console.log("i am going to add a click every second!");
         }, 1000);
     })
-
-    // increment cost of autoClick button after each purchase.
-
-
-
-
-
-    // increment cost of speedUp button after each purchase.
-
-
     
 });
+
+// finished!
