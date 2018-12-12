@@ -39,9 +39,9 @@ $(document).ready(function() {
             console.log("speedCost = " +speedCost);
             clicks = clicks - speedCost;
             $("#clickCount").html(clicks);
-            (speedCost = (speedCost + 250));
+            (speedCost = (speedCost + 150));
             $("#speed").text("Buy for " + (speedCost));
-            console.log("I am going to add 250 to the cost of Speed Click");
+            console.log("I am going to add 150 to the cost of Speed Click");
         }
     })
 
