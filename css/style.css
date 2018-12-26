@@ -39,14 +39,14 @@ p {
     margin: 0 auto;
 }
 
-#autoclicker, #speedup {
+#autoclicker, #speedup, #super {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 10px;
 }
 
-#auto, #speed {
+#auto, #speed, #duper {
     padding: 10px;
     background-color: #F6F6F6;
     width: 150px;

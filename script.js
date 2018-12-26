@@ -1,8 +1,9 @@
 'use strict';
 $(document).ready(function() {
-    let clicks = 0; //user clicks.  change to 0 when done
-    let autoCost = 10; //need to make this reflect increased cost!
-    let speedCost = 100; //need to make this reflect increased cost!
+    let clicks = 0;
+    let autoCost = 10; 
+    let speedCost = 100; 
+    let superCost = 300;
     var button = $("#click");
     let total = 0;
     // let autoClick;
@@ -11,6 +12,7 @@ $(document).ready(function() {
     //need to set up
     let autoClicks = 0; //automatically click once per second, updates total.
     let speedTime = 0; //speeds up the time for auto clicks, updates total.
+    let superClicks = 0; // automatically clicks 2 x per second, or once every half second!
 
     // User-Click-Increase Total.
     $("#click").on("click", function(){
@@ -45,6 +47,20 @@ $(document).ready(function() {
         }
     })
 
+    // SuperDuper Purchased = subtract cost from total!
+    // increment cost of superduper button after each purchase.
+    $("#duper").on("click", function(){
+        if (clicks >= superCost){
+            console.log("clicks = " +clicks);
+            console.log("superCost = " +superCost);
+            clicks = clicks - superCost;
+            $("#clickCount").html(clicks);
+            (superCost = (superCost + 200));
+            $("#duper").text("Buy for " + (superCost));
+            console.log("I am going to add 200 to the cost of Speed Click");
+        }
+    })
+
     // Function to have auto clicker self click 1x per 5 seconds
     $("#auto").on("click", function(){
         setInterval(function(){
@@ -54,11 +70,19 @@ $(document).ready(function() {
     })
 
     // Function to have auto clicker self click 1x per 1 second.
-    $("#speedup").on("click", function(){
+    $("#speed").on("click", function(){
         setInterval(function(){
         (button).trigger("click");
         console.log("i am going to add a click every second!");
         }, 1000);
+    })
+
+     // Function to have superduper clicker self click 1x per .5 second.
+     $("#duper").on("click", function(){
+        setInterval(function(){
+        (button).trigger("click");
+        console.log("i am going to add a click every half second!");
+        }, 500);
     })
     
 });
