@@ -31,6 +31,10 @@ $(document).ready(function() {
             (autoCost = (autoCost + 15));
             $("#auto").text("Buy for " + (autoCost));
             console.log("I am going to add 15 to the cost of Auto Click");
+            setInterval(function(){
+            (button).trigger("click");
+            console.log("i am going to add a click every 5 seconds!");
+            }, 5000);
         }
     })
     // Speed Up Purchased = subtract cost from total!
@@ -44,11 +48,15 @@ $(document).ready(function() {
             (speedCost = (speedCost + 150));
             $("#speed").text("Buy for " + (speedCost));
             console.log("I am going to add 150 to the cost of Speed Click");
+            setInterval(function(){
+            (button).trigger("click");
+            console.log("i am going to add a click every second!");
+            }, 1000);
         }
     })
 
     // SuperDuper Purchased = subtract cost from total!
-    // increment cost of superduper button after each purchase.
+    // Increment cost of superduper button after each purchase.
     $("#duper").on("click", function(){
         if (clicks >= superCost){
             console.log("clicks = " +clicks);
@@ -58,31 +66,11 @@ $(document).ready(function() {
             (superCost = (superCost + 200));
             $("#duper").text("Buy for " + (superCost));
             console.log("I am going to add 200 to the cost of Speed Click");
+            setInterval(function(){
+            (button).trigger("click");
+            console.log("i am going to add a click every half second!");
+            }, 500);
         }
-    })
-
-    // Function to have auto clicker self click 1x per 5 seconds
-    $("#auto").on("click", function(){
-        setInterval(function(){
-        (button).trigger("click");
-        console.log("i am going to add a click every 5 seconds!");
-        }, 5000);
-    })
-
-    // Function to have auto clicker self click 1x per 1 second.
-    $("#speed").on("click", function(){
-        setInterval(function(){
-        (button).trigger("click");
-        console.log("i am going to add a click every second!");
-        }, 1000);
-    })
-
-     // Function to have superduper clicker self click 1x per .5 second.
-     $("#duper").on("click", function(){
-        setInterval(function(){
-        (button).trigger("click");
-        console.log("i am going to add a click every half second!");
-        }, 500);
     })
     
 });
