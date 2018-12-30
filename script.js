@@ -8,12 +8,6 @@ $(document).ready(function() {
     let total = 0;
     // let autoClick;
 
-
-    //need to set up
-    let autoClicks = 0; //automatically click once per second, updates total.
-    let speedTime = 0; //speeds up the time for auto clicks, updates total.
-    let superClicks = 0; // automatically clicks 2 x per second, or once every half second!
-
     // User-Click-Increase Total.
     $("#click").on("click", function(){
         clicks = clicks + 1;
@@ -22,6 +16,7 @@ $(document).ready(function() {
     })
     // Auto Click Purchased = subtract cost from total!
     // increment cost of autoClick button after each purchase.
+    // only allow purchase if total clicks is more than cost!
     $("#auto").on("click", function(){
         if (clicks >= autoCost){
             console.log("clicks = " +clicks);
@@ -39,6 +34,7 @@ $(document).ready(function() {
     })
     // Speed Up Purchased = subtract cost from total!
     // increment cost of speedup button after each purchase.
+    // only allow purchase if total clicks is more than cost!
     $("#speed").on("click", function(){
         if (clicks >= speedCost){
             console.log("clicks = " +clicks);
@@ -57,6 +53,7 @@ $(document).ready(function() {
 
     // SuperDuper Purchased = subtract cost from total!
     // Increment cost of superduper button after each purchase.
+    // only allow purchase if total clicks is more than cost!
     $("#duper").on("click", function(){
         if (clicks >= superCost){
             console.log("clicks = " +clicks);
