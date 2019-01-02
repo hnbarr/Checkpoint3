@@ -60,7 +60,7 @@ $(document).ready(function() {
             console.log("superCost = " +superCost);
             clicks = clicks - superCost;
             $("#clickCount").html(clicks);
-            (superCost = (superCost + 200));
+            (superCost = (superCost + 250));
             $("#duper").text("Buy for " + (superCost));
             console.log("I am going to add 200 to the cost of Speed Click");
             setInterval(function(){
