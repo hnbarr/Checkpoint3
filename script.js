@@ -13,6 +13,7 @@ $(document).ready(function() {
         clicks = clicks + 1;
         total = clicks;
         $("#clickCount").html(clicks);
+        $('title').html("Clicker Score " + clicks);
     })
     // Auto Click Purchased = subtract cost from total!
     // increment cost of autoClick button after each purchase.
